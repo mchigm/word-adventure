@@ -1,7 +1,11 @@
 import random
+import time
+# import cv2
+from termcolor import colored
 wars = int()
 i = int(1)
 religion = str()
+text = str()
 debug = False
 value = ["moving speed", "training speed", "sea moving speed", "vessel building spped", "wepond durability", "wepond building speed", "buffs"]
 default = [1,1,0,0,1,1,'null']
@@ -22,21 +26,26 @@ class cliffs:
   the_minesquad = [3,2,0,3,3,3,'master']
   gold_empire = []
 class caves:
-  the_originals = [3,3,3,3,3,3,'master']
+  the_wepondaries = [1,2,0,3,2,3, 'iron age']
+  the_originals = [3,3,0,3,3,3,'master']
+  the_miners = [2,2,1,3,3,3,'vainemine']
 class plateau:
   the_tribes = []
 class arctics:
   the_northens = []
-  ice_empire = []
-  vikings = []
+  ice_empire = [2,1,3,]
+  vikings = [3,1,2,3,1,1,'raid']
 class woods:
   the_spirits = []
 class sky:
   the_aeros = [3,2,1,0,2,0,'quickcharge']
   aviacion_legend = [3,2,1,1,1,1,'total victory']
   the_wings = [3,3,3,0,0,0, 'air supremecy']
-tsanumi = damage 50
-rain = heal +20, enemy food supply - 10 (not in use for the sky)
+# tsanumi = damage 659
+# rain = heal +20, enemy food supply - 10 (not in use for the sky)
+# master = every slot +1, and slot with 3 +2
+# speed = moving speed,training speed, sea moving speed, vessel building speed, wepond building speed +1
+# united
 
 logo = 'MCHIGM'
 print (logo + "'" + 's' , "text game")
@@ -49,7 +58,7 @@ while i == 1:
   print ("press 6 for the snows")
   print ("press 7 for the forests")
   print ("press 8 for the arrows")
-  choose = int(input("what is your choice:_ "))
+  choose = int(input(colored("what is your choice", 'yellow', attrs=['blink','reverse'])+ ":_ "))
   if choose == 0:
     print ("##debug mode ***")
     debug = True
@@ -81,9 +90,11 @@ while i == 1:
     print ('plese choose numbers between the above')
     i = 1
 if debug == False :
-  print (choose)
+  print (colored(choose, "blue" , attrs=['blink']))
   place = random.choice(city)
-  print ("<class ", "'" + "__main__." + place + "'>")
+  text = ("<class ", "'" + "__main__." + place + "'>")
+  print (colored(text, 'yellow',attrs=['reverse']))
+  time.sleep(2)
   if place == 'Ghufran' :
     place = 'the mainland, Ghufran'
   elif place == 'Marlin' :
@@ -99,11 +110,17 @@ if debug == False :
   elif place == 'Nehc' :
     place = 'the start of culture, the country of Nehc'
   else:
-    print ("server crashed :/ please restart the server")
+    print (colored("server crashed :/ please restart the server", "blue", attrs=['blink']))
   if choose == seas :
-    print ("The seas were born to be masters at swimming, they live in the costal area of" , place , end = ".")
+    print ("The seas were born to be masters at swimming, they live in the costal area of" , place + ".")
   if choose == grassland:
-    print ("The grasslanders were fast and good at building, they out standing construction skills can even use paper to defend a coannon. They live in the plain of" , place , end = ".")
+    print ("The grasslanders were fast and good at building, they out standing construction skills can even use paper to defend a coannon. They live in the plain of" , place + ".")
   if choose == cliffs:
-    print ("The cliffmans were good at mining. Low-education level didn't bother them ")
-    
+    print ("The cliffmans were good at mining. Low-education level didn't bother them for a strong civilization, they were the mountainers from" , place + ".")
+
+if debug == True:
+  print (choose)
+  print ()
+# x = input()
+# for i in range (len(x), 0, -1):
+#   print(x[i-1], end="")
