@@ -2,6 +2,9 @@ import random
 import time
 # import cv2
 from termcolor import colored
+def crashcount ():
+  global crashcount
+  crashcount += 1
 wars = int()
 i = int(1)
 religion = str()
@@ -111,6 +114,7 @@ if debug == False :
     place = 'the start of culture, the country of Nehc'
   else:
     print (colored("server crashed :/ please restart the server", "blue", attrs=['blink']))
+    crashcount()
   if choose == seas :
     print ("The seas were born to be masters at swimming, they live in the costal area of" , place + ".")
   if choose == grassland:
@@ -120,7 +124,11 @@ if debug == False :
 
 if debug == True:
   print (choose)
-  print ()
+  print (crashcount)
 # x = input()
 # for i in range (len(x), 0, -1):
 #   print(x[i-1], end="")
+# n = "Together, We Fight the Virus!"
+# for i in range(1) :
+#   n = len(n)
+# print (n)
