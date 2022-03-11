@@ -1,1 +1,1 @@
-import index
+from world_generation import Ghufran

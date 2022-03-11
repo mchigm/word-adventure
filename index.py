@@ -9,7 +9,7 @@ def crashcount ():
 
 value = ["moving speed", "training speed", "sea moving speed", "vessel building speed", "wepond durability", "wepond building speed", "buffs"]
 default = [1,1,0,0,1,1,'null']
-city = ['Ghu fran', 'Mariln', 'Shae', 'Sae republic', 'Alibe', 'Naztmic', 'Nehc']
+city = ['Ghufran', 'Mariln', 'Shae', 'Sae republic', 'Alibe', 'Naztmic', 'Nehc']
 #0-3
 def exp(x):
   x += wars//2
@@ -163,6 +163,7 @@ if debug == False :
     print ("" , place + ".")
   if choose == sky:
     print ("" , place + ".")
+  if place = 
 if debug == True:
   debug = False
   print (choose)
